@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+}
+
+model Student {
+  id                 String   @id @default(cuid()) // Using CUID for ID
+  rollNo             String   @unique
+  name               String
+  gender             String
+  allottedHostel     String
+  roomNo             String
+  code               String? // Assuming code might be optional or not always present
+  arrivalDate        String? // Store as string for simplicity from CSV
+  departureDate      String? // Store as string
+  allottedMess       String
+  messFrom           String? // Store as string
+  messTo             String? // Store as string
+  remarks            String?
+  messPreference     String?
+  mobileNo           String?
+  emergencyContact   String?
+  pwd                String? // "Yes"/"No" or other string from CSV
+  age                Int?
+  email              String?  @unique // Email should ideally be unique
+  department         String?
+
+  messCardSerialNumber String?  @unique // The 4-digit serial number
+  messCardAllottedAt   DateTime? // When was the card allotted
+
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
