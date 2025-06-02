@@ -310,7 +310,7 @@ export default function AdminDashboard() {
                       This action will revoke the mess card (
                       <strong>#{searchedStudent.messCardSerialNumber}</strong>)
                       allotted to <strong>{searchedStudent.name}</strong>. This
-                      cannot be undone easily (you'll have to re-allot it).
+                      cannot be undone easily (you&apos;ll have to re-allot it).
                     </AlertDialogDescription>
                   </AlertDialogHeader>
                   <AlertDialogFooter>
