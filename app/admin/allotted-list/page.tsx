@@ -29,7 +29,7 @@ export default async function AllottedListPage() {
           <Button variant="outline">Back to Dashboard</Button>
         </Link>
       </div>
-
+      <div>Under construction</div>
       {/* {allottedStudents.length > 0 ? (
         <>
           <div className="mb-4 flex justify-end">
