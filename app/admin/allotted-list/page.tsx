@@ -17,7 +17,7 @@ import DownloadCSVButton from "./DownloadCSVButton";
 export const dynamic = "force-dynamic"; // Ensure fresh data on each request
 
 export default async function AllottedListPage() {
-  const allottedStudents: Student[] = await getAllottedStudents();
+  // const allottedStudents: Student[] = await getAllottedStudents();
 
   return (
     <div className="container mx-auto p-4 md:p-8">
@@ -30,7 +30,7 @@ export default async function AllottedListPage() {
         </Link>
       </div>
 
-      {allottedStudents.length > 0 ? (
+      {/* {allottedStudents.length > 0 ? (
         <>
           <div className="mb-4 flex justify-end">
             <DownloadCSVButton />
@@ -77,7 +77,7 @@ export default async function AllottedListPage() {
         <p className="text-center text-gray-500">
           No students have been allotted mess cards yet.
         </p>
-      )}
+      )} */}
     </div>
   );
 }
